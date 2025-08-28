@@ -1,0 +1,196 @@
+{
+    "Users": [
+      {
+        "UserID": 1,
+        "Username": "admin",
+        "Password": "admin123",
+        "Email": "admin@example.com"
+      },
+      {
+        "UserID": 2,
+        "Username": "user1",
+        "Password": "user123",
+        "Email": "user1@example.com"
+      }
+    ],
+    "Roles": [
+      {
+        "RoleID": 1,
+        "RoleName": "Admin",
+        "Description": "Administrator role"
+      },
+      {
+        "RoleID": 2,
+        "RoleName": "User",
+        "Description": "Regular user role"
+      }
+    ],
+    "UserRoles": [
+      {
+        "ID": 1,
+        "UserID": 1,
+        "RoleID": 1
+      },
+      {
+        "ID": 2,
+        "UserID": 2,
+        "RoleID": 2
+      }
+    ],
+    "Procedures": [
+      {
+        "ProcedureID": 1,
+        "ProcedureName": "Data Cleaning",
+        "Description": "Removes duplicates and standardizes formats",
+        "CreatedByUserID": 1,
+        "LastModifiedUserID": 1
+      },
+      {
+        "ProcedureID": 2,
+        "ProcedureName": "Statistical Analysis",
+        "Description": "Performs basic statistical calculations",
+        "CreatedByUserID": 1,
+        "LastModifiedUserID": 1
+      },
+      {
+        "ProcedureID": 3,
+        "ProcedureName": "Data Visualization",
+        "Description": "Creates charts and graphs from data",
+        "CreatedByUserID": 2,
+        "LastModifiedUserID": 2
+      },
+      {
+        "ProcedureID": 4,
+        "ProcedureName": "Machine Learning Model",
+        "Description": "Trains and applies ML models to data",
+        "CreatedByUserID": 1,
+        "LastModifiedUserID": 2
+      },
+      {
+        "ProcedureID": 5,
+        "ProcedureName": "Data Integration",
+        "Description": "Merges data from multiple sources",
+        "CreatedByUserID": 2,
+        "LastModifiedUserID": 1
+      }
+    ],
+    "Fields": [
+      {
+        "FieldID": 1,
+        "FieldName": "SampleField1",
+        "DataType": "varchar"
+      },
+      {
+        "FieldID": 2,
+        "FieldName": "SampleField2",
+        "DataType": "int"
+      }
+    ],
+    "DataSets": [
+      {
+        "DataSetID": 1,
+        "DataSetName": "Sales Data 2023",
+        "Description": "Annual sales figures",
+        "ProcedureID": 1,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 2,
+        "DataSetName": "Customer Feedback",
+        "Description": "Survey responses from Q2",
+        "ProcedureID": 2,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 3,
+        "DataSetName": "Website Traffic",
+        "Description": "Daily visitor counts",
+        "ProcedureID": 3,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 4,
+        "DataSetName": "Product Inventory",
+        "Description": "Current stock levels",
+        "ProcedureID": 1,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 5,
+        "DataSetName": "Employee Performance",
+        "Description": "Quarterly KPI data",
+        "ProcedureID": 2,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 6,
+        "DataSetName": "Marketing Campaign Results",
+        "Description": "ROI for recent campaigns",
+        "ProcedureID": 3,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 7,
+        "DataSetName": "Supply Chain Data",
+        "Description": "Supplier delivery times",
+        "ProcedureID": 4,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 8,
+        "DataSetName": "Customer Segmentation",
+        "Description": "Demographic clusters",
+        "ProcedureID": 4,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 9,
+        "DataSetName": "Social Media Metrics",
+        "Description": "Engagement rates across platforms",
+        "ProcedureID": 3,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 10,
+        "DataSetName": "Financial Forecasts",
+        "Description": "Projected revenue for next FY",
+        "ProcedureID": 2,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 11,
+        "DataSetName": "Product Returns",
+        "Description": "Reasons for customer returns",
+        "ProcedureID": 1,
+        "FieldId": 1
+      },
+      {
+        "DataSetID": 12,
+        "DataSetName": "Website Heatmaps",
+        "Description": "User interaction patterns",
+        "ProcedureID": 3,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 13,
+        "DataSetName": "Customer Churn Prediction",
+        "Description": "ML model input data",
+        "ProcedureID": 4,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 14,
+        "DataSetName": "Competitor Price Analysis",
+        "Description": "Market rate comparisons",
+        "ProcedureID": 2,
+        "FieldId": 2
+      },
+      {
+        "DataSetID": 15,
+        "DataSetName": "IoT Sensor Data",
+        "Description": "Raw data from factory sensors",
+        "ProcedureID": 5,
+        "FieldId": 2
+      }
+    ]
+  }

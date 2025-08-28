@@ -12,6 +12,10 @@ namespace PruebaTecnicaN.Models
         // Se inicializa con null! porque la propiedad no acepta valores NULL.
         public string RoleName { get; set; } = null!;
         // La descripcion del Rol
-        public string RoleDescription { get; set; }= null!;
+        public string Description { get; set; }= null!;
+
+        // Relación 1 a N con UserRoles
+        public virtual ICollection<UserRoles> UserRoles { get; set; } = new List<UserRoles>();
+
     }
 }

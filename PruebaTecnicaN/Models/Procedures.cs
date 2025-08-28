@@ -16,16 +16,22 @@ namespace PruebaTecnicaN.Models
         // Descripción del procedimiento
         public string? Description { get; set; }
 
-        // Para saber Usuario que creó este procedimiento
-        [ForeignKey("Users")]
+        // FK a Users que creó el procedimiento
+        [Required]
         public int CreatedByUserID { get; set; }
+        [ForeignKey("CreatedByUserID")]
+        public virtual Users CreatedByUser { get; set; } = null!;
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        // Para saber que Usuario lo modificó por última vez
-        [ForeignKey("Users")]
+        // FK a Users que modificó por última vez
         public int? LastModifiedUserID { get; set; }
+        [ForeignKey("LastModifiedUserID")]
+        public virtual Users? LastModifiedUser { get; set; }
 
-        public DateTime? LastModifiedDate { get; set; }
+        public DateTime LastModifiedDate { get; set; } = DateTime.Now;
+
+        // Relación 1 a N con los datasets
+        public virtual ICollection<Datasets> DataSets { get; set; } = new List<Datasets>();
     }
 }

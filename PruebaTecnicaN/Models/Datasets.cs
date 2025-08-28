@@ -15,19 +15,21 @@ namespace PruebaTecnicaN.Models
         // Descripción opcional
         public string? Description { get; set; }
 
-        // [ForeignKey("Procedures")] Cada DataSet pertenece a un Procedure
-        [ForeignKey("Procedures")]
+        // FK a Procedure
+        [Required]
         public int ProcedureID { get; set; }
+        [ForeignKey("ProcedureID")]
+        public virtual Procedures Procedure { get; set; } = null!;
 
-        // [ForeignKey("Fields")] Cada DataSet se asocia a un Field
-        [ForeignKey("Fields")]
-        public int FieldID { get; set; }
+        // FK a Field
+        [Required]
+        public int FieldId { get; set; }
+        [ForeignKey("FieldId")]
+        public virtual Fields Field { get; set; } = null!;
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        public DateTime? LastModifiedDate
-        {
-            get; set;
-        }
+        public DateTime? LastModifiedDate { get; set; }
+
     }
 }
